@@ -117,3 +117,19 @@ p.percentage {
         text-shadow: 0px 0px 5px #ff0000;
     }
 }
+
+.number {
+    font-size: 90px;
+}
+
+.text {
+    font-size: 32px;
+}
+
+.mb {
+    margin-bottom: 16px;
+}
+
+.mt {
+    margin-top: 8px;
+}

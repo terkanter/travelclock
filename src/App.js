@@ -24,9 +24,11 @@ function App() {
     const [data, setData] = useState(getData);
 
     useEffect(() => {
+
         const t = setTimeout(() => {
             setData(getData())
-        }, 3600)
+        }, 3600);
+
         return () => clearTimeout(t);
     }, [data])
 
@@ -35,17 +37,17 @@ function App() {
             <header className="App-header">
                 <figure>
                     <div className="face top"><p id="s">
-                        <span style={{fontSize: 90, }}>{data.percentage}% </span>
+                        <span className="number">{data.percentage}% </span>
                     </p></div>
                     <div className="face front"><p id="m">
-                        <span style={{ fontSize: 32, marginBottom: 16 }}>remaining time:</span>
-                        <span style={{fontSize: 90, }}>{data.left} </span>
-                        <span style={{ fontSize: 32, marginTop: 8}}>hours </span>
+                        <span className="text mb">remaining time:</span>
+                        <span className="number">{data.left} </span>
+                        <span className="text mt">hours </span>
                     </p></div>
                     <div className="face left"><p id="h">
-                        <span style={{ fontSize: 32, marginBottom: 16 }}>in the way:</span>
-                        <span style={{fontSize: 90, }}>{data.done} </span>
-                        <span style={{ fontSize: 32, marginTop: 8}}>hours </span>
+                        <span className="text mb">in the way:</span>
+                        <span className="number">{data.done} </span>
+                        <span className="text mt">hours </span>
                     </p></div>
                 </figure>
             </header>
